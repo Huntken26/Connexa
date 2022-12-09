@@ -1,0 +1,46 @@
+[
+    {
+      "firstName": "Lisa",
+      "lastName": "Erickson",
+      "email": "erickson.l.lisa@gmail.com",
+      "username": "",
+      "passwordHash": "",
+      "registeredAt": "",
+      "lastLogin": "",
+      "intro": "",
+      "strengths":""
+    },
+    {
+        "firstName": "Matt",
+        "lastName": "Malone",
+        "email": "matthewmalone3@gmail.com",
+        "username": "",
+        "passwordHash": "",
+        "registeredAt": "",
+        "lastLogin": "",
+        "intro": "",
+        "strengths":""
+      },
+      {
+        "firstName": "Kenny",
+        "lastName": "Hunter",
+        "email": "huntken26@gmail.com",
+        "username": "",
+        "passwordHash": "",
+        "registeredAt": "",
+        "lastLogin": "",
+        "intro": "",
+        "strengths":""
+      },
+      {
+        "firstName": "Kyle",
+        "lastName": "Nguyen",
+        "email": "q_nguyen91@yahoo.com",
+        "username": "",
+        "passwordHash": "",
+        "registeredAt": "",
+        "lastLogin": "",
+        "intro": "",
+        "strengths":""
+      }
+  ]

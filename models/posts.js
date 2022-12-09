@@ -35,6 +35,14 @@ posts.init(
       allowNull: false,
     },
   },
+
+  {
+    sequelize,
+    timestamps: true,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'post'
+  }
 /*Need to update the below.
   {
     hooks: {
