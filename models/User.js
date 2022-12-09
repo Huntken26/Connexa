@@ -45,13 +45,13 @@ User.init(
       },
     },
     registeredAt: {
-      type: DataTypes.Date,
+      type: DataTypes.DATE,
       allowNull: false,
 
     },
 
     lastLogin: {
-      type: DataTypes.Date,
+      type: DataTypes.DATE,
       allowNull: false,
 
     },
