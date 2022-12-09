@@ -1,3 +1,30 @@
+<<<<<<< HEAD
+const sequelize = require('../config/connection');
+const { User, Post } = require('../models');
+
+const userData = require('./userData.json');
+const postData = require('./postData.json');
+
+const seedDatabase = async () => {
+  await sequelize.sync({ force: true });
+
+  const users = await User.bulkCreate(userData, {
+    individualHooks: true,
+    returning: true,
+  });
+
+  for (const post of postData) {
+    await Post.create({
+      ...post,
+      user_id: users[Math.floor(Math.random() * users.length)].id,
+    });
+  }
+
+  process.exit(0);
+};
+
+seedDatabase();
+=======
 INSERT INTO user (id, firstName, lastName, email, userName, passwordHash, registeredAt, lastLogin, intro, strengths)
 VALUES 
 ( ? , "Lisa", "Erickson", "erickson.l.lisa@gmail.com", ? , ? , ? , ? , ? , ? ),  
@@ -5,3 +32,4 @@ VALUES
 ( ? , "Kenny", "Hunter", "huntken26@gmail.com", ? , ? , ? , ? , ? , ? ),  
 ( ? , "Kyle", "Nguyen", "q_nguyen91@yahoo.com", ? , ? , ? , ? , ? , ? )
    
+>>>>>>> be463e1f274ae6926d3c1311b3a186c833bb6bf7
