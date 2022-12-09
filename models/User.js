@@ -10,17 +10,25 @@ class User extends Model {
 
 User.init(
   {
+<<<<<<< HEAD
+    id: {
+=======
     userID: {
+>>>>>>> be463e1f274ae6926d3c1311b3a186c833bb6bf7
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
+<<<<<<< HEAD
+    name: {
+=======
     firstName: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     lastName: {
+>>>>>>> be463e1f274ae6926d3c1311b3a186c833bb6bf7
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -32,6 +40,16 @@ User.init(
         isEmail: true,
       },
     },
+<<<<<<< HEAD
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [8],
+      },
+    },
+  },
+=======
     userName: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -66,6 +84,7 @@ User.init(
     },
   },
 
+>>>>>>> be463e1f274ae6926d3c1311b3a186c833bb6bf7
   {
     hooks: {
       beforeCreate: async (newUserData) => {
@@ -85,4 +104,8 @@ User.init(
   }
 );
 
+<<<<<<< HEAD
 module.exports = User;
+=======
+module.exports = User;
+>>>>>>> be463e1f274ae6926d3c1311b3a186c833bb6bf7
