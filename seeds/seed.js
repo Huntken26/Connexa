@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const sequelize = require('../config/connection');
 const { User, Post } = require('../models');
 
@@ -16,7 +15,7 @@ const seedDatabase = async () => {
   for (const post of postData) {
     await Post.create({
       ...post,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
+      userId: users[Math.floor(Math.random() * users.length)].id,
     });
   }
 
@@ -24,12 +23,12 @@ const seedDatabase = async () => {
 };
 
 seedDatabase();
-=======
-INSERT INTO user (id, firstName, lastName, email, userName, passwordHash, registeredAt, lastLogin, intro, strengths)
-VALUES 
-( ? , "Lisa", "Erickson", "erickson.l.lisa@gmail.com", ? , ? , ? , ? , ? , ? ),  
-( ? , "Matt", "Malone", "matthewmalone3@gmail.com", ? , ? , ? , ? , ? , ? ),  
-( ? , "Kenny", "Hunter", "huntken26@gmail.com", ? , ? , ? , ? , ? , ? ),  
-( ? , "Kyle", "Nguyen", "q_nguyen91@yahoo.com", ? , ? , ? , ? , ? , ? )
+
+// INSERT INTO user (id, firstName, lastName, email, userName, passwordHash, registeredAt, lastLogin, intro, strengths)
+// VALUES 
+// ( ? , "Lisa", "Erickson", "erickson.l.lisa@gmail.com", ? , ? , ? , ? , ? , ? ),  
+// ( ? , "Matt", "Malone", "matthewmalone3@gmail.com", ? , ? , ? , ? , ? , ? ),  
+// ( ? , "Kenny", "Hunter", "huntken26@gmail.com", ? , ? , ? , ? , ? , ? ),  
+// ( ? , "Kyle", "Nguyen", "q_nguyen91@yahoo.com", ? , ? , ? , ? , ? , ? )
    
->>>>>>> be463e1f274ae6926d3c1311b3a186c833bb6bf7
+
