@@ -2,70 +2,44 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class User extends Model {
+class posts extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
 
-User.init(
+posts.init(
   {
-    userID: {
+    commentID: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    firstName: {
-      type: DataTypes.STRING,
+    postID: {
+      type: DataTypes.INTEGER,
       allowNull: false,
-    },
-    lastName: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    email: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true,
-      },
+      primaryKey: true,
+      autoIncrement: true,
     },
     userName: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
     },
-    passwordHash: {
+    postTitle: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        len: [10],
-      },
     },
-    registeredAt: {
+    commentContent: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    createdAt: {
       type: DataTypes.Date,
       allowNull: false,
-
-    },
-
-    lastLogin: {
-      type: DataTypes.Date,
-      allowNull: false,
-
-    },
-    intro: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    strengths: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      //Choices - if we put an array here, can this be multi-select?//
     },
   },
-
+/*Need to update the below.
   {
     hooks: {
       beforeCreate: async (newUserData) => {
@@ -82,7 +56,7 @@ User.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'user',
-  }
+  } */
 );
 
 module.exports = User;
