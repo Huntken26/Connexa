@@ -1,38 +1,66 @@
+ 
 const router = require('express').Router();
-const { Project } = require('../../models');
+const { Post } = require('../../models');
+const sequelize = require('../../config/connection');
 const withAuth = require('../../utils/auth');
 
-router.post('/', withAuth, async (req, res) => {
-  try {
-    const newProject = await Project.create({
-      ...req.body,
-      user_id: req.session.user_id,
-    });
-
-    res.status(200).json(newProject);
-  } catch (err) {
-    res.status(400).json(err);
-  }
+// Gets every posts
+router.get('/', (req, res) => {
+    Post.findAll({})
+        .then(postData => res.json(postData))
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        })
 });
 
-router.delete('/:id', withAuth, async (req, res) => {
-  try {
-    const projectData = await Project.destroy({
-      where: {
-        id: req.params.id,
-        user_id: req.session.user_id,
-      },
-    });
+//Gets posts by ID
+router.get('/:id', (req, res) => {
+    Post.findOne({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(postData => res.json(postData))
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        })
+});
 
-    if (!projectData) {
-      res.status(404).json({ message: 'No project found with this id!' });
-      return;
+//Posting posts
+router.post('/', withAuth, (req, res) => {
+    if (req.session) {
+        Post.create({
+                name: req.body.name,
+                text: req.body.text,
+                user_id: req.session.user_id
+            })
+            .then(postData => res.json(postData))
+            .catch(err => {
+                console.log(err);
+                res.status(400).json(err);
+            })
     }
+});
 
-    res.status(200).json(projectData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
+//Deletes posts 
+router.delete('/:id', withAuth, (req, res) => {
+    Post.destroy({
+        where: {
+            id: req.params.id
+        }
+    }).then(postData => {
+        if (!postData) {
+            res.status(404).json({ message: 'None found' });
+            return;
+        }
+        res.json(postData);
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
 });
 
 module.exports = router;
+
