@@ -1,5 +1,32 @@
 [
-    {
-      
-    }
-  ]
+  {
+    "postId": 1,
+    "userId": 1,
+    "postTitle": "Welcome all Coders!",
+    "postContent": "We're almost there! It's almost time to cross the finish line and to graduate from the University of Minnesota Bootcamp. Honestly I never saw this day approaching so fast..."
+  },
+  {
+    "postId": 2,
+    "userId": 2,
+    "postTitle": "Woohoo!",
+    "postContent": "I'm so excited! I just learned about the AI chat and the capabilities it has to create code. Some may fear this but I am intrigued... thoughts?"
+  },
+  {
+    "postId": 3,
+    "userId": 3,
+    "postTitle": "Woohoo!",
+    "postContent": "I'm so excited! I just learned about the AI chat and the capabilities it has to create code. Some may fear this but I am intrigued... thoughts?"
+  },
+  {
+    "postId": 4,
+    "userId": 4,
+    "postTitle": "React Native!",
+    "postContent": "Has anyone tried using react native for mobile development...?"
+  },
+  {
+    "postId": 5,
+    "userId": 5,
+    "postTitle": "COncerns!",
+    "postContent": "Will we have access to our coding materials and class materials after we graduate?"
+  }
+]
