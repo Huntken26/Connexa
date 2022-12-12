@@ -35,7 +35,7 @@ comment.init(
       allowNull: false,
     },
     createdAt: {
-      type: DataTypes.Date,
+      type: DataTypes.DATE,
       allowNull: false,
     },
   },
