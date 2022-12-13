@@ -13,12 +13,6 @@ comment.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    postID: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      reference:
-      // autoIncrement: true,
-    },
     userName: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -34,6 +28,13 @@ comment.init(
     createdAt: {
       type: DataTypes.DATE,
       allowNull: false,
+    },
+    postID: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'posts',
+        key: 'postID',
+      }
     },
   },
   {

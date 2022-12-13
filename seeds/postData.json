@@ -1,42 +1,38 @@
 [
   {
     "postID": 1,
-    "userID": 1,
-    "userName": 1,
     "postTitle": "Welcome all Coders!",
     "postContent": "We're almost there! It's almost time to cross the finish line and to graduate from the University of Minnesota Bootcamp. Honestly I never saw this day approaching so fast...",
-    "createdAt": "2022-12-12"
+    "createdAt": "2022-12-12",
+    "userID": 1
   },
   {
     "postID": 2,
-    "userID": 2,
-    "userName": 2,
     "postTitle": "Woohoo!",
     "postContent": "I'm so excited! I just learned about the AI chat and the capabilities it has to create code. Some may fear this but I am intrigued... thoughts?",
-    "createdAt":"2022-12-12"
+    "createdAt":"2022-12-12",
+    "userID": 2
   },
   {
     "postID": 3,
-    "userID": 3,
-    "userName": 3,
     "postTitle": "Woohoo!",
     "postContent": "I'm so excited! I just learned about the AI chat and the capabilities it has to create code. Some may fear this but I am intrigued... thoughts?",
-    "createdAt":"2022-12-12"
+    "createdAt":"2022-12-12",
+    "userID": 3
   },
   {
     "postID": 4,
-    "userID": 4,
-    "userName": 4,
     "postTitle": "React Native!",
     "postContent": "Has anyone tried using react native for mobile development...?",
-    "createdAt":"2022-12-12"
+    "createdAt":"2022-12-12",
+    "userID": 4
   },
   {
     "postID": 5,
-    "userID": 5,
     "userName": 5,
     "postTitle": "COncerns!",
     "postContent": "Will we have access to our coding materials and class materials after we graduate?",
-    "createdAt":"2022-12-12"
+    "createdAt":"2022-12-12",
+    "userID": 5
   }
 ]
