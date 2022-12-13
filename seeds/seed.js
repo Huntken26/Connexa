@@ -17,22 +17,21 @@ const seedDatabase = async () => {
   for (const post of postData) {
     await Post.create({
       ...post,
-      userId: users[Math.floor(Math.random() * users.length)].id,
+      userID: users[Math.floor(Math.random() * users.length)].id,
+      format_date: (date) => {
+        // Format date as MM/DD/YYYY
+        return date.toLocaleDateString();
+      }
     });
+   
   }
   const seedComments = () => Comment.bulkCreate(commentData);
   seedComments();
   process.exit(0);
 };
 
-seedComments();
+
 seedDatabase();
 
-// INSERT INTO user (id, firstName, lastName, email, userName, passwordHash, registeredAt, lastLogin, intro, strengths)
-// VALUES 
-// ( ? , "Lisa", "Erickson", "erickson.l.lisa@gmail.com", ? , ? , ? , ? , ? , ? ),  
-// ( ? , "Matt", "Malone", "matthewmalone3@gmail.com", ? , ? , ? , ? , ? , ? ),  
-// ( ? , "Kenny", "Hunter", "huntken26@gmail.com", ? , ? , ? , ? , ? , ? ),  
-// ( ? , "Kyle", "Nguyen", "q_nguyen91@yahoo.com", ? , ? , ? , ? , ? , ? )
    
 

@@ -1,46 +1,50 @@
 [
     {
+      "userID": "123",
       "firstName": "Lisa",
       "lastName": "Erickson",
       "email": "erickson.l.lisa@gmail.com",
-      "username": "Lisa123",
+      "userName": "Lisa123",
       "passwordHash": "",
-      "registeredAt": "",
-      "lastLogin": "",
-      "intro": "",
-      "strengths":""
+      "registeredAt": "2020-12-12",
+      "lastLogin": "2020-12-12",
+      "intro": "abc",
+      "strengths":"abc"
     },
     {
+        "userID":"124",
         "firstName": "Matt",
         "lastName": "Malone",
         "email": "matthewmalone3@gmail.com",
-        "username": "Matt456",
+        "userName": "Matt456",
         "passwordHash": "",
-        "registeredAt": "",
-        "lastLogin": "",
-        "intro": "",
-        "strengths":""
+        "registeredAt": "2020-12-12",
+        "lastLogin": "2020-12-12",
+        "intro": "abc",
+        "strengths":"abc"
       },
       {
+        "userID" : "125",
         "firstName": "Kenny",
         "lastName": "Hunter",
         "email": "huntken26@gmail.com",
-        "username": "Kenny789",
+        "userName": "Kenny789",
         "passwordHash": "",
-        "registeredAt": "",
-        "lastLogin": "",
-        "intro": "",
-        "strengths":""
+        "registeredAt": "2020-12-12",
+        "lastLogin": "2020-12-12",
+        "intro": "abc",
+        "strengths":"abc"
       },
       {
+        "userID" : "126",
         "firstName": "Kyle",
         "lastName": "Nguyen",
         "email": "q_nguyen91@yahoo.com",
-        "username": "Kyle1011",
+        "userName": "Kyle1011",
         "passwordHash": "",
-        "registeredAt": "",
-        "lastLogin": "",
-        "intro": "",
-        "strengths":""
+        "registeredAt": "2020-12-12",
+        "lastLogin": "2020-12-12",
+        "intro": "abc",
+        "strengths":"abc"
       }
   ]

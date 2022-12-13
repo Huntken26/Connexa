@@ -16,8 +16,8 @@ comment.init(
     postID: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
+      reference:
+      // autoIncrement: true,
     },
     userName: {
       type: DataTypes.STRING,
@@ -40,7 +40,7 @@ comment.init(
     sequelize,
     timestamps: true,
     freezeTableName: true,
-    underscored: true,
+    underscored: false,
     modelName: 'comment'
   }
 );

@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
     Post.findOne({
             where: {
-                id: req.params.id
+                postID: req.params.id
             }
         })
         .then(postData => res.json(postData))

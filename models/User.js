@@ -50,6 +50,7 @@ User.init(
     lastLogin: {
       type: DataTypes.DATE,
 
+
     },
     intro: {
       type: DataTypes.STRING,
@@ -76,7 +77,7 @@ User.init(
     sequelize,
     timestamps: false,
     freezeTableName: true,
-    underscored: true,
+    underscored: false,
     modelName: 'user',
   }
 );

@@ -15,9 +15,9 @@ posts.init(
     },
     userID: {
       type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
+      // allowNull: false,
+      reference: 
+      // autoIncrement: true,
     },
     postTitle: {
       type: DataTypes.STRING,
@@ -37,7 +37,7 @@ posts.init(
     sequelize,
     timestamps: true,
     freezeTableName: true,
-    underscored: true,
+    underscored: false,
     modelName: 'post'
   }
 );
