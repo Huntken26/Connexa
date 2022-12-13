@@ -29,7 +29,7 @@ CREATE TABLE posts (
     PRIMARY KEY (postID),
     KEY userName (userName),
     KEY postTitle (postTitle),
-    KEY createdAt (createdAt),git git 
+    KEY createdAt (createdAt),
     
 )
 
