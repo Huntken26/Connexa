@@ -36,7 +36,7 @@ User.init(
     },
     passwordHash: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
       validate: {
         len: [10],
       },
@@ -78,7 +78,7 @@ User.init(
     timestamps: false,
     freezeTableName: true,
     underscored: false,
-    modelName: 'user',
+    modelName: 'User',
   }
 );
 
