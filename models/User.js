@@ -43,22 +43,20 @@ User.init(
     },
     registeredAt: {
       type: DataTypes.DATE,
-      allowNull: false,
-
+      defaultValue: () => {
+        return Date.now()
+      }
     },
 
     lastLogin: {
       type: DataTypes.DATE,
 
-
     },
     intro: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     strengths: {
       type: DataTypes.STRING,
-      allowNull: false,
       //Choices - if we put an array here, can this be multi-select?//
     },
   },
