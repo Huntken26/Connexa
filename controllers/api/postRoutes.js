@@ -1,7 +1,7 @@
  
 const router = require('express').Router();
 const { Post } = require('../../models');
-const sequelize = require('../config/connection');
+//const sequelize = require('../config/connection');//
 const withAuth = require('../../utils/auth');
 
 // Gets every posts
@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
     Post.findOne({
             where: {
-                postID: req.params.id
+                id: req.params.id
             }
         })
         .then(postData => res.json(postData))
