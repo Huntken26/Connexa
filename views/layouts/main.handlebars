@@ -35,22 +35,49 @@
             <div class="column right has-text-centered">
               <h1 class="title is-4">Sign up today</h1>
               <p class="description">start contributing to the community right away</p>
-              <form>
+              <form class="signup-form">
                 <div class="field">
                   <div class="control">
-                    <input class="input is-medium" type="text" placeholder="Name">
+                    <input class="input is-medium" id="name-signup" type="text" placeholder="Name">
                   </div>
                 </div>
 
                 <div class="field">
                   <div class="control">
-                    <input class="input is-medium" type="email" placeholder="Email">
+                    <input class="input is-medium" id="email-signup" type="email" placeholder="Email">
+                  </div>
+                </div>
+                 <div class="field">
+                  <div class="control">
+                    <input class="input is-medium" id="password-signup" type="password" placeholder="Password">
                   </div>
                 </div>
                 <button class="button is-block is-primary is-fullwidth is-medium">Submit</button>
                 <br />
                 <small><em>Take a small step to a great future</em></small>
               </form>
+              
+            </div>
+                      <div class="column right has-text-centered">
+              <h1 class="title is-4">Login</h1>
+              <p class="description">Check in with the community</p>
+              <form class="login-form">
+                <div class="field">
+                  <div class="control">
+                    <input class="input is-medium" id="email-login" type="email" placeholder="Email">
+                  </div>
+                </div>
+
+                <div class="field">
+                  <div class="control">
+                    <input class="input is-medium" id="password-login" type="password" placeholder="Password">
+                  </div>
+                </div>
+                <button class="button is-block is-primary is-fullwidth is-medium">Submit</button>
+                <br />
+                <small><em>Take a small step to a great future</em></small>
+              </form>
+              
             </div>
           </div>
         </div>
@@ -172,7 +199,7 @@
 
 
 
-        <!--<a href="/login">login</a> -->
+        <a href="/login">login</a> 
         {{/if}}
       </nav>
     </header>
