@@ -6,18 +6,20 @@ const loginFormHandler = async (event) => {
     const passwordHash = document.querySelector('#password-login').value.trim();
   
     if (email && passwordHash) {
-      // Send a POST request to the API endpoint
       const response = await fetch('/api/users/login', {
-        method: 'POST',
-        body: JSON.stringify({ email, passwordHash }),
-        headers: { 'Content-Type': 'application/json' },
+        method: 'post',
+        body: JSON.stringify({
+          email,
+          passwordHash
+        }),
+        headers: { 'Content-Type': 'application/json' }
       });
   
       if (response.ok) {
         // If successful, redirect the browser to the profile page
         document.location.replace('/profile');
       } else {
-        alert(response.statusText);
+        alert("Incorrect email or password");
       }
     }
   };
