@@ -7,7 +7,7 @@ class User extends Model {
 
 User.init(
   {
-    userID: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,

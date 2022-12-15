@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Connexa</title>
-  <link rel="stylesheet" href="/public/css/jass.css">
-  <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="public\css\style.css">
 </head>
 
 <body>
   <div class="flex-column justify-space-around" id="mainbanner">
     <header class="display-flex justify-space-between align-center p-2">
-      <h1>
+      <h1 class="is-info">
         <span role="img" aria-label="message">💬</span>
         <a href="/">Welcome to Connexa</a>
       </h1>
@@ -22,134 +22,21 @@
         <a href="/profile">profile</a> |
         <button class="no-button" id="logout">logout</button>
         {{else}}
-
-<section class="container">
-      <div class="columns is-multiline">
-        <div class="column is-8 is-offset-2 register">
-          <div class="columns">
-            <div class="column left">
-              <h1 class="title is-1">Come join the movement!</h1>
-              <h2 class="subtitle colored is-4">Coding made simple</h2>
-              <p>Trying to get into coding but those search engine results giving you a headache trying to decipher? don't worry you are not alone, this is why the team here at Connexa embarked on this journey to simplify coding and software development for beginners and curious coding novices looking to take that first step into the industry.</p>
+ <section class="hero is-info is-medium is-bold">
+  <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="title">
+                    Come join the movement!
+                    </h1>
+                    <h2 class="subtitle">
+                   Trying to get into coding but those search engine results giving you a headache trying to decipher? don't worry you are not alone, this is why the team here at Connexa embarked on this journey to simplify coding and software development for beginners and curious coding novices looking to take that first step into the industry.
+                    </h2>
+                </div>
             </div>
-            
+ </section>
+ 
 
-
-        <div class="column is-8 is-offset-2">
-          <br>
-          <nav class="level">
-            <div class="level-left">
-              <div class="level-item">
-                <span class="icon">
-                  <i class="fab fa-twitter"></i>
-                </span> &emsp;
-                <span class="icon">
-                  <i class="fab fa-facebook"></i>
-                </span> &emsp;
-                <span class="icon">
-                  <i class="fab fa-instagram"></i>
-                </span> &emsp;
-                <span class="icon">
-                  <i class="fab fa-github"></i>
-                </span> &emsp;
-                <span class="icon">
-                  <i class="fas fa-envelope"></i>
-                </span>
-              </div>
-            </div>
-            <div class="level-right">
-              <small class="level-item" style="color: var(--textLight)">
-                &copy; Connexa All Rights Reserved. Established 2022.
-              </small>
-            </div>
-          </nav>
-        </div>
-      </div>
-    </section>
-  </body>
-  <style>
-    :root {
-      --brandColor: hsl(166, 67%, 51%);
-      --background: rgb(247, 247, 247);
-      --textDark: hsla(0, 0%, 0%, 0.66);
-      --textLight: hsla(0, 0%, 0%, 0.33);
-    }
-
-    body {
-      background: var(--background);
-      height: 100vh;
-      color: var(--textDark);
-    }
-
-    .field:not(:last-child) {
-      margin-bottom: 1rem;
-    }
-
-    .register {
-      margin-top: 10rem;
-      background: white;
-      border-radius: 10px;
-    }
-
-    .left,
-    .right {
-      padding: 4.5rem;
-    }
-
-    .left {
-      border-right: 5px solid var(--background);
-    }
-
-    .left .title {
-      font-weight: 800;
-      letter-spacing: -2px;
-    }
-
-    .left .colored {
-      color: var(--brandColor);
-      font-weight: 500;
-      margin-top: 1rem !important;
-      letter-spacing: -1px;
-    }
-
-    .left p {
-      color: var(--textLight);
-      font-size: 1.15rem;
-    }
-
-    .right .title {
-      font-weight: 800;
-      letter-spacing: -1px;
-    }
-
-    .right .description {
-      margin-top: 1rem;
-      margin-bottom: 1rem !important;
-      color: var(--textLight);
-      font-size: 1.15rem;
-    }
-
-    .right small {
-      color: var(--textLight);
-    }
-
-    input {
-      font-size: 1rem;
-    }
-
-    input:focus {
-      border-color: var(--brandColor) !important;
-      box-shadow: 0 0 0 1px var(--brandColor) !important;
-    }
-
-    .fab,
-    .fas {
-      color: var(--textLight);
-      margin-right: 1rem;
-    }
-
-  </style>
-
+  
 
 
 
