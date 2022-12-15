@@ -29,19 +29,28 @@ router.get('/:id', (req, res) => {
 });
 
 //Posting posts
-router.post('/', withAuth, (req, res) => {
-    if (req.session) {
-        Post.create({
-                name: req.body.name,
-                text: req.body.text,
-                user_id: req.session.user_id
-            })
-            .then(postData => res.json(postData))
-            .catch(err => {
-                console.log(err);
-                res.status(400).json(err);
-            })
-    }
+router.post('/', withAuth, async (req, res) => {
+    const body = req.body
+ try {
+    const newPost = await Post.create({...body, userId:req.session.userId});
+    res.json(newPost)
+    console.log(newPost)
+ }
+ catch (err){
+    res.status(500).json(err)
+ }
+    // // if (req.session) {
+    // //     Post.create({
+    //             name: req.body.name,
+    //             text: req.body.text,
+    //             user_id: req.session.user_id
+    //         })
+    //         .then(postData => res.json(postData))
+    //         .catch(err => {
+    //             console.log(err);
+    //             res.status(400).json(err);
+    //         })
+    // }
 });
 
 //Deletes posts 
