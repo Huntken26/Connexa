@@ -1,61 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
+  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Connexa</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="public\css\style.css">
-</head>
+    <title>Connexa</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    >
+    <link rel="stylesheet" href="css/style.css" >
+  </head>
 
-<body>
-  <div class="flex-column justify-space-around" id="mainbanner">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1 class="is-info">
-        <span role="img" aria-label="message">💬</span>
-        <a href="/">Welcome to Connexa</a>
-      </h1>
-      <nav>
-       
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
- <section class="hero is-info is-medium is-bold">
-  <div class="hero-body">
+  <body>
+    <div class="flex-column justify-space-around" id="mainbanner">
+      <header class="display-flex justify-space-between align-center p-2">
+        <h1 class="is-info">
+          <span role="img" aria-label="message">💬</span>
+          <a href="/">Home</a>
+        </h1>
+        <nav>
+
+          {{#if logged_in}}
+            <a href="/profile">profile</a>
+            |
+            <button class="no-button" id="logout">logout</button>
+          {{else}}
+            <section class="hero is-info is-medium is-bold">
+              <div class="hero-body">
                 <div class="container has-text-centered">
-                    <h1 class="title">
-                    Come join the movement!
-                    </h1>
-                    <h2 class="subtitle">
-                   Trying to get into coding but those search engine results giving you a headache trying to decipher? don't worry you are not alone, this is why the team here at Connexa embarked on this journey to simplify coding and software development for beginners and curious coding novices looking to take that first step into the industry.
-                    </h2>
+                  <h1 class="title">
+                    Welcome to Connexa!
+                  </h1>
+                  <h2 class="subtitle">
+                    Connect & learn without the pressure.
+                  </h2>
                 </div>
-            </div>
- </section>
- 
+              </div>
+            </section>
 
-  
+            <div class="loginLink"><a href="/login">Login here</a></div>
+            <div class="signupLink"><a href="/signup">Don't have an account? Sign up now!</a></div>
+          {{/if}}
+        </nav>
+      </header>
+      <main class="container container-fluid mt-5">
+        {{{body}}}
 
+      </main>
+      <footer>
 
+      </footer>
+    </div>
 
-        <a href="/login">login</a> 
-        {{/if}}
-      </nav>
-    </header>
-    <main class="container container-fluid mt-5">
-              {{{body}}}
-  
-    </main>
-    <footer>
-      
-    </footer>
-  </div>
-
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-</body>
+    {{#if logged_in}}
+      <script src="js/logout.js"></script>
+    {{/if}}
+  </body>
 
 </html>
