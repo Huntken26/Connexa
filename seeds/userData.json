@@ -8,8 +8,8 @@
       "passwordHash": "1234567891",
       "registeredAt": "2020-12-12",
       "lastLogin": "2020-12-12",
-      "intro": "abc",
-      "strengths":"abc"
+      "intro": "Bubbly and fun Coder",
+      "strengths":"Javascript, CSS, Back end"
     },
     {
         "userID":"124",
@@ -20,8 +20,8 @@
         "passwordHash": "1234567891",
         "registeredAt": "2020-12-12",
         "lastLogin": "2020-12-12",
-        "intro": "abc",
-        "strengths":"abc"
+        "intro": "I'm not new to this I'm true to this",
+        "strengths":"Javascript, CSS, Front end"
       },
       {
         "userID" : "125",
@@ -32,8 +32,8 @@
         "passwordHash": "1234567891",
         "registeredAt": "2020-12-12",
         "lastLogin": "2020-12-12",
-        "intro": "abc",
-        "strengths":"abc"
+        "intro": "Ready to start this new journey",
+        "strengths":"Javascript, CSS"
       },
       {
         "userID" : "126",
@@ -44,7 +44,7 @@
         "passwordHash": "1234567891",
         "registeredAt": "2020-12-12",
         "lastLogin": "2020-12-12",
-        "intro": "abc",
-        "strengths":"abc"
+        "intro": "Great addition to your team",
+        "strengths":"Front and Back end"
       }
   ]

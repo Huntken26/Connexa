@@ -1,41 +1,41 @@
 [
   {
-    "commentID": 1,
+    "id": 1,
     "userName": "Lisa123",
     "postTitle": "Welcome all Coders!",
-    "commentContent": "We're almost there!",
+    "commentContent": "Have you heard of the new framework?!",
     "createdAt": "2022-12-12",
     "postID": 1
   },
   {
-    "commentID": 2,
+    "id": 2,
     "userName": "Matt456",
     "postTitle": "Woohoo!",
-    "commentContent": "I'm so excited!",
+    "commentContent": "Let's goooooo!",
     "createdAt": "2022-12-12",
     "postID": 2
   },
   {
-    "commentID": 3,
+    "id": 3,
     "userName": "Kenny789",
     "postTitle": "Woohoo!",
-    "commentContent": "I'm so excited! I just learned about the AI chat and the capabilities it has to create code. Some may fear this but I am intrigued... thoughts?",
+    "commentContent": "I just learned about the AI chat and the capabilities it has to create code... thoughts?",
     "createdAt": "2022-12-12",
     "postID": 3
   },
   {
-    "commentID": 4,
+    "id": 4,
     "userName": "Lisa123",
     "postTitle": "React Native!",
-    "commentContent": "????",
+    "commentContent": "???? Idk about that",
     "createdAt": "2022-12-12",
     "postID": 4
   },
   {
-    "commentID": 5,
+    "id": 5,
     "userName": "Kyle1011",
     "postTitle": "COncerns!",
-    "commentContent": "Good question!",
+    "commentContent": "Did you finish the interview?!",
     "createdAt": "2022-12-12",
     "postID": 5
   }
