@@ -24,7 +24,7 @@ Open up the terminal and enter: npm install.
 ## USAGE/INSTRUCTIONS:
 Set up the db within mysql. Then use these commands in the terminal: npm run seed. npm start. 
 Checkout the video walkthrough below:
-[connexa test run video.webm](https://user-images.githubusercontent.com/107738986/207771569-8d5d184e-32e8-4173-854d-868c5d8a614d.webm)
+https://user-images.githubusercontent.com/107738986/207772516-8fef29a6-6111-4b3b-bb1e-2421bdf75470.mp4
 
 ## CREDITS:
 
