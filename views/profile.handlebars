@@ -1,22 +1,31 @@
+  
+    <div class="flex-column justify-space-around" id="mainbanner">
+      <header class="display-flex justify-space-between align-center p-2">
+        <h1 class="is-info">
+          <span role="img" aria-label="message">💬</span>
+          <a href="/">Home</a>
+        </h1>
+
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{firstName}}!</h2>
+    <h2 class="createpost">Welcome, {{firstName}}!</h2>
   </div>
 </div>
-
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>Create a New Post:</h3>
-
-    <form class="form new-post-form">
-      <div class="form-group">
-        <label for="postTitle">post name:</label>
-        <input class="form-input" type="text" id="post-title" name="post-name" />
-      </div>
-      <div class="form-group">
-        <label for="postContent">Description:</label>
-        <textarea class="form-input" id="post-desc" name="post-desc"></textarea>
-      </div>
+    <h3 class="createpost">Create a New Post:</h3>
+  <div class="field">
+  <label for="postTitle" class="label">Post Title</label>
+  <div class="control">
+    <input class="form-input" type="text" id="post-title" name="post-name" />
+  </div>
+</div>
+<div "form-group" class="field">
+  <label  for="postContent" class="label">Post Content</label>
+  <textarea class="form-input" id="post-desc" name="post-desc"></textarea>
+  <div class="control">
+  </div>
+</div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary">Create</button>
       </div>
@@ -61,5 +70,6 @@
     </div>
   </div>
   {{/if}}
+  
 
 <script src="js/profile.js"></script>
