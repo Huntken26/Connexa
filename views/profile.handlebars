@@ -24,21 +24,45 @@
   </div>
 
   {{#if posts.length}}
-  <div class="col-md-6 post-list">
-    <h3>Current Posts:</h3>
+{{#each posts as |post| }}
 
-    {{#each posts as |post|}}
-   <div class="text-center">
-  <h2>{{postTitle}}</h2>
-  <p>{{postContent}}</p>
-  <p>Created by {{userName}} on {{createdAt}}</p>
-  <p>
-    <button class="btn btn-primary">Create new post</button>
-  </p>
-</div>
-    {{/each}}
+<div class="box content">
+  <article class="post">
+    <h2>
+      <a href="/post/{{post.id}}">{{post.postTitle}}</a>
+    </h2>
+    <h4> Created by {{post.User.userName}} on {{format_date post.createdAt}}</h4>
+    <div class="media">
+      <div class="media-left">
+        <p class="image is-32x32">
+          <img src="https://www.shutterstock.com/image-vector/man-icon-vector-260nw-1040084344.jpg">
+        </p>
+      </div>
+      <div class="media-content">
+        <div class="content">
+          <p>
+            <a href="#">@user</a> replied 34 minutes ago &nbsp;
+            <span class="tag">Q & A</span>
+          </p>
+        </div>
+      </div>
+      <div class="media-right">
+        <span class="has-text-grey-light"><i class="fa fa-comments"></i> 1</span>
+      </div>
+    </div>
+  </article>
+
+
+  {{/each}}
+  {{else }}
+  <div class="row mb-4 post">
+    <div class="col-md-5">
+      <h2>
+        //post title//
+      </h2>
+      <p>No posts created yet.</p>
+    </div>
   </div>
   {{/if}}
-</div>
 
 <script src="js/profile.js"></script>

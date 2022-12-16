@@ -15,15 +15,15 @@ Post.init(
     },
     postTitle: {
       type: DataTypes.STRING,
-      allowNull: false,
+      
     },
     postContent: {
       type: DataTypes.STRING,
-      allowNull: false,
+      
     },
     createdAt: {
       type: DataTypes.DATE,
-      allowNull: false,
+      
     },
     userID: {
       type: DataTypes.INTEGER,

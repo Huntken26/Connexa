@@ -18,9 +18,9 @@ router.get('/', async (req, res) => {
     const posts = postData.map((post) => post.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      posts, 
-      logged_in: req.session.logged_in 
+    res.render('homepage', {
+      posts,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
@@ -53,16 +53,23 @@ router.get('/post/:id', async (req, res) => {
 router.get('/profile', async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['passwordHash'] },
-      include: [{ model: Post }],
+
+    const postData = await Post.findAll({
+      where: {
+        userID: req.session.user_id
+      },
+      include: [
+        {
+          model: User,
+          attributes: ['userName'],
+        },
+      ],
+
     });
 
-    const user = userData.get({ plain: true });
-
+    const posts = postData.map((post) => post.get({ plain: true }));
     res.render('profile', {
-      ...user,
+      ...posts,
       logged_in: true
     });
   } catch (err) {
